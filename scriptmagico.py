@@ -10,6 +10,9 @@ except OSError:
 
 j=0
 for base, dirs, files in os.walk('.'):
+		
+	if ".git" in dirs:
+		dirs.remove(".git")	
 	for d in dirs[:]:
 		
 		d_sin_barras=d.replace("_"," ")
